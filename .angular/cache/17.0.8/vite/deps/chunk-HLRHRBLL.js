@@ -4957,11 +4957,6 @@ var MatRippleLoader = _MatRippleLoader;
 })();
 
 export {
-  coerceBooleanProperty,
-  coerceNumberProperty,
-  coerceArray,
-  coerceCssPixelValue,
-  coerceElement,
   Platform,
   getSupportedInputTypes,
   normalizePassiveListenerOptions,
@@ -4970,8 +4965,6 @@ export {
   _getFocusedElementPierceShadowDom,
   _getEventTarget,
   _isTestEnvironment,
-  Directionality,
-  BidiModule,
   ENTER,
   ESCAPE,
   SPACE,
@@ -4981,6 +4974,11 @@ export {
   DOWN_ARROW,
   A,
   hasModifierKey,
+  coerceBooleanProperty,
+  coerceNumberProperty,
+  coerceArray,
+  coerceCssPixelValue,
+  coerceElement,
   ObserversModule,
   addAriaReferencedId,
   removeAriaReferencedId,
@@ -4990,6 +4988,8 @@ export {
   LiveAnnouncer,
   FocusMonitor,
   A11yModule,
+  Directionality,
+  BidiModule,
   VERSION2 as VERSION,
   AnimationCurves,
   AnimationDurations,
@@ -5032,4 +5032,4 @@ export {
   MatOptionModule,
   MatRippleLoader
 };
-//# sourceMappingURL=chunk-SDRVFNYW.js.map
+//# sourceMappingURL=chunk-HLRHRBLL.js.map
