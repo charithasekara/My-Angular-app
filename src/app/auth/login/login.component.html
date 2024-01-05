@@ -1,0 +1,43 @@
+<div class="container w-md--50 px-md-5 mt-3 ">
+  <div class="form-group px-5 gx-5">
+    <div class="row mt-2">
+      <h1>Sign Up</h1>
+      <p>Fill in the bellow to complete registration</p>
+      <h1 style="margin-top: 25px;">Account Information</h1>
+    </div>
+    <hr class="mt-0 mb-4"/>
+
+    <div class="row gx-5">
+      <div class="col">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="ex:-Sachintha" [formControl]="email" required>
+        @if (email.invalid) {
+          <mat-error>{{getErrorMessage()}}</mat-error>
+        }
+      </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row gx-5">
+        <div class="col">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Password</mat-label>
+            @if (email.invalid) {
+              <mat-error>{{getErrorMessage()}}</mat-error>
+            }
+            <input matInput [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end my-4">
+        <button mat-stroked-button type="button">Cancel</button>
+        <button mat-flat-button class="text-bg-primary" type="button">Sign in</button>
+      </div>
+    </div>
+  </div>
+

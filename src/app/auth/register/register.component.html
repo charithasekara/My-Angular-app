@@ -1,0 +1,155 @@
+
+<main class="container w-50 px-5">
+  <div class="form-group px-5 gx-5">
+    <div class="row mt-2">
+      <h1>Sign Up</h1>
+      <p>Fill in the bellow to complete registration</p>
+      <h2 style="margin-top: 25px;">Account Information</h2>
+    </div>
+    <hr class="mt-0 mb-4"/>
+
+    <div class="row gx-5">
+      <div class="col" >
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="ex:-Sachintha" [formControl]="email" required>
+          @if (email.invalid) {
+            <mat-error>{{getErrorMessage()}}</mat-error>
+          }
+        </mat-form-field>
+      </div>
+      <div class="col" >
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="ex:-Mudalige" [formControl]="email" required>
+          @if (email.invalid) {
+            <mat-error>{{getErrorMessage()}}</mat-error>
+          }
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row gx-5">
+      <div class="col">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Password</mat-label>
+          @if (email.invalid) {
+            <mat-error>{{getErrorMessage()}}</mat-error>
+          }
+          <input matInput [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Confirm password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <h1>Personal Information</h1>
+    </div>
+    <hr class="mt-0 mb-4"/>
+
+    <div class="row">
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="ex:-Sachintha" [formControl]="email" required>
+      @if (email.invalid) {
+        <mat-error>{{getErrorMessage()}}</mat-error>
+      }
+    </mat-form-field>
+    </div>
+
+    <div class="row">
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Phone Number</mat-label>
+      <input matInput placeholder="ex:-Sachintha" [formControl]="email" required>
+      @if (email.invalid) {
+        <mat-error>{{getErrorMessage()}}</mat-error>
+      }
+    </mat-form-field>
+    </div>
+
+    <div class="row">
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Identification Number(NIC/Passport)</mat-label>
+      <input matInput placeholder="ex:-Sachintha" [formControl]="email" required>
+    </mat-form-field>
+    </div>
+
+    <div class="row">
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Identification Proof (NIC/Passport)</mat-label>
+      <mat-icon matSuffix>upload</mat-icon>
+      <input matInput placeholder="ex:-Sachintha" >
+    </mat-form-field>
+    </div>
+
+    <div class="row">
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Street Address</mat-label>
+      <input matInput placeholder="ex:-Sachintha">
+    </mat-form-field>
+    </div>
+
+    <div class="row">
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>City</mat-label>
+      <input matInput placeholder="ex:-Sachintha">
+    </mat-form-field>
+    </div>
+
+    <div class="row">
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Select a Distric/Province</mat-label>
+      <mat-select>
+        <mat-option>None</mat-option>
+        <mat-option value="option1">Option 1</mat-option>
+        <mat-option value="option2">Option 2</mat-option>
+        <mat-option value="option3">Option 3</mat-option>
+      </mat-select>
+    </mat-form-field>
+    </div>
+
+    <div class="row">
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Zip/Postal code</mat-label>
+      <input matInput placeholder="ex:-Sachintha" >
+    </mat-form-field>
+    </div>
+
+    <div class="card p-4" appearance="outline">
+      <div class="row">
+        <div class="col-1">
+          <mat-icon matSuffix>error_outline</mat-icon>
+        </div>
+        <div class="col">
+          <p>When you sign in,we use cookie in your browser to track your session. You can read our Cookie Policy for more information</p>
+        </div>
+       </div>
+    </div>
+        <li class="list-group-item mt-4">
+          <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+          <label class="form-check-label" for="firstCheckbox">I hereby confirm that I have read and understood the Privacy Policy</label>
+        </li>
+    <hr class="mt-5"/>
+
+    <div class="row">
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end my-4">
+      <button mat-stroked-button type="button">Cancel</button>
+      <button mat-flat-button class="text-bg-primary" type="button">Register</button>
+    </div>
+  </div>
+  </div>
+
+</main>
+
+
