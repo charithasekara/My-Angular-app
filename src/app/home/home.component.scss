@@ -19,58 +19,9 @@ h1{
   font-size: medium;
 }
 .object-fit-cover {
-  height: 100%;
+  min-height: 150px;
   object-fit: cover;
 }
-
-
-// .resturant-icon.green{
-//   background-color: rgba(104, 196, 104, 0.41);
-// }
-// .resturant-icon.green .material-symbols-outlined{
-//   color: rgb(34, 97, 38);
-// }
-// .resturant-icon.red{
-//   background-color: rgba(168, 98, 98, 0.421);
-// }
-// .resturant-icon.red .material-symbols-outlined{
-//   color: rgb(108, 25, 25);
-// }
-// .resturant-icon.orange{
-//   background-color: rgba(223, 169, 69, 0.653);
-// }
-// .resturant-icon.orange .material-symbols-outlined{
-//   color: rgb(100, 80, 44);
-// }
-// .resturant-icon.blue{
-// background-color: rgba(58, 88, 171, 0.43);
-// }
-// .resturant-icon.blue .material-symbols-outlined{
-//   color: rgb(78, 78, 150);
-// }
-// .resturant-icon{
-//   border-radius: 360px;
-//   min-height: 50px;
-//   max-width: 50px;
-//   justify-content: center;
-//   display: flex;
-// }
-// .material-symbols-outlined{
-//   line-height: 2;
-// }
-// p{
-//   color: rgb(108, 108, 108);
-// }
-// .resturant-title{
-//   margin-top: 4%;
-// }
-
-
-
-
-
-
-
 
 @mixin rest-mat-icon($bgColor,$iconColor) {
   background-color: $bgColor;
