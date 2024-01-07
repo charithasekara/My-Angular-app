@@ -18,6 +18,11 @@ h1{
   font-weight: bold;
   font-size: medium;
 }
+.object-fit-cover {
+  height: 100%;
+  object-fit: cover;
+}
+
 
 // .resturant-icon.green{
 //   background-color: rgba(104, 196, 104, 0.41);
