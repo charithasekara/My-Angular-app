@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .navbar{
   background: #a0aef630;
   backdrop-filter: blur(3px);
@@ -13,4 +16,5 @@ main
   'GRAD' 0,
   'opsz' 24
 }
+
 
