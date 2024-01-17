@@ -1,0 +1,26 @@
+.card{
+  max-width: 540px;
+  border-radius: $border-radius-xl;
+  margin-bottom: 1rem;
+  max-height: 150px;
+  overflow: hidden;
+
+  &-title{
+    font-weight: bold;
+    font-size: medium;
+  }
+  img{
+    border-start-start-radius: $border-radius-xl;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  &-body{
+    padding-block-end: 1.5rem;
+  }
+  &-text{
+    max-height: 80px;
+    overflow-y: auto;
+  }
+  
+}
