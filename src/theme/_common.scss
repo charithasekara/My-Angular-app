@@ -13,12 +13,11 @@
   &-img{
     border-radius: 24px;
     height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
   }
   &-right{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
 
     h1 {
       letter-spacing: 3px;
@@ -40,32 +39,81 @@
     }
   }
   &-left{
-    display: flex;
-    flex-direction: column;
     position: relative;
-    height: auto;
+    height: 100%;
+    @media only screen and (max-width: 767px) {
+      height: 450px;
+    }
   }
   &-card{
     position: absolute;
     background-color: rgb(255, 255, 255);
     border-radius: 12px;
-    width: auto;
+    bottom: 15px;
+    left: 15px;
     height: auto;
-    left: 25px;
-    bottom: 25px;
+    box-sizing: border-box;
+    // /* Media query for devices with a screen width up to 767px (typically mobile devices) */
+    // @media only screen and (max-width: 767px) {
+    //   .details-card {
+    //     min-width: 25%;
+    //   }
+    // }
+
+    // /* Media query for devices with a screen width between 768px and 991px (typically tablets) */
+    // @media only screen and (min-width: 768px) and (max-width: 991px) {
+    //   .details-card {
+    //     max-width: 50%;
+    //   }
+    // }
+
+    // /* Media query for devices with a screen width 992px and above (typically desktops) */
+    // @media only screen and (min-width: 992px) {
+    //   .details-card {
+    //     max-width: 60%;
+    //   }
+    // }
     &-sec1, &-sec2{
       display: flex;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
       padding: 10px;
     }
+    &-sec2{
+      padding-top: 0;
+      .rating{
+        display: flex;
+        gap: 5px;
+      }
+    }
+    &-sec1{
+      position: relative;
+      .like-logo{
+        position: absolute;
+        top: -15px;
+        left: -10px;
+        img{
+          max-width: 30px;
+          height: 30px;
+        }
+      }
+    }
     &-right-info{
       margin-left: 33.33px;
+      .value{
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .checked{
+        color: rgb(220, 200, 22);
+      }
     }
     &-left-info{
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
-      align-items: center;
+      align-items: left;
       width: 100%;
       margin: 0 auto;
       box-sizing: border-box;
@@ -75,106 +123,132 @@
           height: 30px;
           border-radius: 50%;
           display: flex;
+          object-fit: cover;
+          object-position: center;
+          border: 2px solid white;
+      }
+      .avs{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div:not(:first-child) {
+          margin-left: -10px;
+      }
+
+      }
+      .rank{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: rgb(90, 138, 227);
+        border: 2px solid rgb(255, 255, 255);
+        font-size: 10px;
+        color: rgb(255, 255, 255);
       }
     }
   }
 
-  @include media-breakpoint-down (sm) {
-      flex-direction: column;
+  // @include media-breakpoint-down (sm) {
+  //     flex-direction: column;
 
-      &-left{
-        width: 100%;
-      }
-      &-right{
-        margin-left: 0;
+  //     &-left{
+  //       width: 100%;
+  //     }
+  //     &-right{
+  //       margin-left: 0;
 
-        &-sec1 h1{
-          margin-top: 16px;
-        }
-      }
-      &card{
-        width: 120px;
-        left: 15px;
-        bottom: 15px;
+  //       &-sec1 h1{
+  //         margin-top: 16px;
+  //       }
+  //     }
+  //     &card{
+  //       width: 120px;
+  //       left: 15px;
+  //       bottom: 15px;
 
-        &-sec1{
-          padding: 5px;
-        }
+  //       &-sec1{
+  //         padding: 5px;
+  //       }
 
-        &-right-info{
-          margin-left: 15px;
-        }
+  //       &-right-info{
+  //         margin-left: 15px;
+  //       }
 
-        &-left-info{
-          height: auto;
-        }
-      }
-  }
+  //       &-left-info{
+  //         height: auto;
+  //       }
+  //     }
+  // }
 }
 /*  Details card - end */
 
-
-
-@include media-breakpoint-up (sm) {
-  .details-left{
-    width: 100%;
-  }
-  .details-right{
-    margin-left: 0;
-  }
-  .details-right-sec1 h1{
-    margin-top: 16px;
-  }
-}
-@include media-breakpoint-down (md) {
-  .details-left{
-    width: 100%;
-  }
-  .details-right{
-    margin-left: 0;
-  }
-  .details-right-sec1 h1{
-    margin-top: 16px;
-  }
-  .details-card-sec1{
-    padding: 5px;
-  }
-}
-@include media-breakpoint-up (md) {
-  .details-left{
-    width: 100%;
-  }
-  .details-right{
-    margin-left: 0;
-  }
-  .details-right-sec1 h1{
-    margin-top: 16px;
-  }
-}
-@include media-breakpoint-down (lg) {
-  .details-left{
-    width: 100%;
-  }
-  .details-right{
-    margin-left: 0;
-  }
-  .details-right-sec1 h1{
-    margin-top: 16px;
-  }
-}
-@include media-breakpoint-up (lg) {
-  .details-right{
-    margin-left: 15%;
-  }
-  .details-left{
-    width: 45%;
-  }
-}
-@include media-breakpoint-up (xl) {
-  .details-left{
-    max-width: 25%;
-  }
-}
+// @include media-breakpoint-up (sm) {
+//   .details-left{
+//     width: 100%;
+//   }
+//   .details-right{
+//     margin-left: 0;
+//   }
+//   .details-right-sec1 h1{
+//     margin-top: 16px;
+//   }
+//   // .details-card{
+//   //   width: 35%;
+//   // }
+// }
+// @include media-breakpoint-down (md) {
+//   .details-left{
+//     width: 100%;
+//   }
+//   .details-right{
+//     margin-left: 0;
+//   }
+//   .details-right-sec1 h1{
+//     margin-top: 16px;
+//   }
+//   .details-card-sec1{
+//     padding: 5px;
+//   }
+// }
+// @include media-breakpoint-up (md) {
+//   .details-left{
+//     width: 100%;
+//   }
+//   .details-right{
+//     margin-left: 0;
+//   }
+//   .details-right-sec1 h1{
+//     margin-top: 16px;
+//   }
+// }
+// @include media-breakpoint-down (lg) {
+//   .details-left{
+//     width: 100%;
+//   }
+//   .details-right{
+//     margin-left: 0;
+//   }
+//   .details-right-sec1 h1{
+//     margin-top: 16px;
+//   }
+// }
+// @include media-breakpoint-up (lg) {
+//   .details-right{
+//     margin-left: 15%;
+//   }
+//   .details-left{
+//     width: 45%;
+//   }
+// }
+// @include media-breakpoint-up (xl) {
+//   .details-left{
+//     max-width: 25%;
+//   }
+// }
 
 @mixin rest-mat-icon($bgColor,$iconColor) {
   background-color: $bgColor;
