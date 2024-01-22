@@ -34,7 +34,7 @@
   }
   &-card{
     position: absolute;
-    background-color: mat.get-color-from-palette($app-primary, A100);
+    background-color: mat.get-color-from-palette($app-primary, 50);
     border-radius: 12px;
     bottom: 15px;
     left: 15px;
