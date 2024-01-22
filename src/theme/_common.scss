@@ -1,13 +1,4 @@
 
-.img2 {
-  min-height: 100%;
-}
-
-.object-fit-cover {
-  min-height: 150px;
-  object-fit: cover;
-}
-
 /*  Details card - start */
 .details{
   &-img{
@@ -18,10 +9,6 @@
     object-fit: cover;
   }
   &-right{
-
-    h1 {
-      letter-spacing: 3px;
-    }
 
     &-sec1{
       margin-bottom: 15px;
@@ -47,32 +34,13 @@
   }
   &-card{
     position: absolute;
-    background-color: rgb(255, 255, 255);
+    background-color: mat.get-color-from-palette($app-primary, A100);
     border-radius: 12px;
     bottom: 15px;
     left: 15px;
     height: auto;
     box-sizing: border-box;
-    // /* Media query for devices with a screen width up to 767px (typically mobile devices) */
-    // @media only screen and (max-width: 767px) {
-    //   .details-card {
-    //     min-width: 25%;
-    //   }
-    // }
 
-    // /* Media query for devices with a screen width between 768px and 991px (typically tablets) */
-    // @media only screen and (min-width: 768px) and (max-width: 991px) {
-    //   .details-card {
-    //     max-width: 50%;
-    //   }
-    // }
-
-    // /* Media query for devices with a screen width 992px and above (typically desktops) */
-    // @media only screen and (min-width: 992px) {
-    //   .details-card {
-    //     max-width: 60%;
-    //   }
-    // }
     &-sec1, &-sec2{
       display: flex;
       flex-direction: row;
@@ -118,23 +86,20 @@
       margin: 0 auto;
       box-sizing: border-box;
 
-      .avatar{
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          display: flex;
-          object-fit: cover;
-          object-position: center;
-          border: 2px solid white;
-      }
-      .avs{
-        display: flex;
-        justify-content: center;
+      .avatars{
         align-items: center;
         div:not(:first-child) {
           margin-left: -10px;
       }
 
+      .avatar{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        border: 2px solid white;
+      }
       }
       .rank{
         display: flex;
@@ -152,103 +117,8 @@
     }
   }
 
-  // @include media-breakpoint-down (sm) {
-  //     flex-direction: column;
-
-  //     &-left{
-  //       width: 100%;
-  //     }
-  //     &-right{
-  //       margin-left: 0;
-
-  //       &-sec1 h1{
-  //         margin-top: 16px;
-  //       }
-  //     }
-  //     &card{
-  //       width: 120px;
-  //       left: 15px;
-  //       bottom: 15px;
-
-  //       &-sec1{
-  //         padding: 5px;
-  //       }
-
-  //       &-right-info{
-  //         margin-left: 15px;
-  //       }
-
-  //       &-left-info{
-  //         height: auto;
-  //       }
-  //     }
-  // }
 }
-/*  Details card - end */
 
-// @include media-breakpoint-up (sm) {
-//   .details-left{
-//     width: 100%;
-//   }
-//   .details-right{
-//     margin-left: 0;
-//   }
-//   .details-right-sec1 h1{
-//     margin-top: 16px;
-//   }
-//   // .details-card{
-//   //   width: 35%;
-//   // }
-// }
-// @include media-breakpoint-down (md) {
-//   .details-left{
-//     width: 100%;
-//   }
-//   .details-right{
-//     margin-left: 0;
-//   }
-//   .details-right-sec1 h1{
-//     margin-top: 16px;
-//   }
-//   .details-card-sec1{
-//     padding: 5px;
-//   }
-// }
-// @include media-breakpoint-up (md) {
-//   .details-left{
-//     width: 100%;
-//   }
-//   .details-right{
-//     margin-left: 0;
-//   }
-//   .details-right-sec1 h1{
-//     margin-top: 16px;
-//   }
-// }
-// @include media-breakpoint-down (lg) {
-//   .details-left{
-//     width: 100%;
-//   }
-//   .details-right{
-//     margin-left: 0;
-//   }
-//   .details-right-sec1 h1{
-//     margin-top: 16px;
-//   }
-// }
-// @include media-breakpoint-up (lg) {
-//   .details-right{
-//     margin-left: 15%;
-//   }
-//   .details-left{
-//     width: 45%;
-//   }
-// }
-// @include media-breakpoint-up (xl) {
-//   .details-left{
-//     max-width: 25%;
-//   }
-// }
 
 @mixin rest-mat-icon($bgColor,$iconColor) {
   background-color: $bgColor;
