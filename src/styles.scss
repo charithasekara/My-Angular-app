@@ -1,3 +1,5 @@
+$font-family-sans-serif: 'opensans', sans-serif;
+
 @use '@angular/material' as mat;
 
 @import "./theme/palette.scss";
@@ -7,11 +9,13 @@
 
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-
 @include mat.core();
+
+
 
 $app-primary: mat.define-palette($admin-primary);
 $app-accent: mat.define-palette($md-red);
+$app-primary-500-contrast: mat.get-color-from-palette($admin-primary, 500-contrast);
 
 $app-theme: mat.define-light-theme((
  color: (
@@ -20,12 +24,17 @@ $app-theme: mat.define-light-theme((
  ),
 ));
 
+
+
+$primary: map-get($app-theme, primary);
+
 @include mat.core-theme($app-theme);
 @include mat.button-theme($app-theme);
 @include mat.form-field-theme($app-theme); // Form-Field theme
 @include mat.input-theme($app-theme);      // Input Theme
 
 @import "./theme/theme.scss";
+
 
 
 

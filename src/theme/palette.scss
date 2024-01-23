@@ -1,3 +1,6 @@
+// @use 'sass:map';
+// @import './theming';
+
 /* For use in src/lib/core/theming/_palette.scss */
 $admin-primary: (
     50 : #ffffff,
@@ -5,7 +8,7 @@ $admin-primary: (
     200 : #b4e49e,
     300 : #95d977,
     400 : #7fd159,
-    500 : #37701c,
+    500 : #ffffff,
     600 : #60c336,
     700 : #55bc2e,
     800 : #4bb527,
@@ -15,12 +18,12 @@ $admin-primary: (
     A400 : #93ff79,
     A700 : #7eff5f,
     contrast: (
-        50 : #000000,
+        50 : #996d6d,
         100 : #000000,
         200 : #000000,
         300 : #000000,
         400 : #000000,
-        500 : #000000,
+        500 : #686877,
         600 : #000000,
         700 : #000000,
         800 : #000000,
@@ -39,7 +42,7 @@ $md-red: (
     200 : #f0b3b3,
     300 : #e99494,
     400 : #e57d7d,
-    500 : #e06666,
+    500 : #a50b0b,
     600 : #dc5e5e,
     700 : #d85353,
     800 : #d34949,
@@ -100,3 +103,10 @@ $md-purple: (
     )
 );
 
+// Foreground palette for light themes.
+// $mat-light-theme-foreground: (
+
+//   icon:              rgba(black, 0.54),
+//   icons:             rgba(black, 0.54),
+
+// );
