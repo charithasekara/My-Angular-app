@@ -21,7 +21,7 @@ $app-primary-500-contrast: mat.get-color-from-palette($admin-primary, 500-contra
 
 //define typography
 $app-typography :mat.define-typography-config(
-  $font-family: 'Poppins',
+  $font-family: 'Poppins, sans-serif',
   $body-1: mat.define-typography-level($font-size: 0.875rem),
 );
 
