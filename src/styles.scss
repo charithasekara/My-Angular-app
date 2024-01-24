@@ -1,38 +1,52 @@
-$font-family-sans-serif: 'opensans', sans-serif;
 
+// Importing Material Design Icons.
 @use '@angular/material' as mat;
 
+// Importing Material Design Icons.
 @import "./theme/palette.scss";
 
 /* Importing Bootstrap SCSS file. */
 @import "bootstrap/scss/bootstrap";
 
+/* Importing Bootstrap CSS file. */
 @import "bootstrap/dist/css/bootstrap.min.css";
 
+/* Importing Material Icons. */
 @include mat.core();
 
-
-
+//define colors
 $app-primary: mat.define-palette($admin-primary);
 $app-accent: mat.define-palette($md-red);
 $app-primary-500-contrast: mat.get-color-from-palette($admin-primary, 500-contrast);
 
+//define typography
+$app-typography :mat.define-typography-config(
+  $font-family: 'Poppins',
+  $body-1: mat.define-typography-level($font-size: 0.875rem),
+);
+
+//define typography
+@include mat.typography-hierarchy($app-typography);
+
+//define theme using colors
 $app-theme: mat.define-light-theme((
  color: (
    primary: $app-primary,
    accent: $app-accent,
  ),
+  typography: $app-typography,
 ));
 
-
-
+//get the primary color to primary
 $primary: map-get($app-theme, primary);
 
+//define theme using colors
 @include mat.core-theme($app-theme);
 @include mat.button-theme($app-theme);
 @include mat.form-field-theme($app-theme); // Form-Field theme
 @include mat.input-theme($app-theme);      // Input Theme
 
+//define theme using colors
 @import "./theme/theme.scss";
 
 
